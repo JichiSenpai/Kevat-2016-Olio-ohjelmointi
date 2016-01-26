@@ -56,16 +56,22 @@ namespace Oliotesti
     {
         static void Main(string[] args)
         {
-            Opiskelija jamk1 = new Opiskelija("Jaakko", "Tammela", "K1697", "Mies", 1996, "tammi_574@hotmail.com", "045-3227518", 2.5);
-            Opiskelija jamk2 = new Opiskelija("Lotta", "Tammela", "H8656", "Nainen", 1998, "siistisähköposti@gmail.com", "045-3227548", 4.8);
-            Opiskelija jamk3 = new Opiskelija("Mikael", "Tammela", "K1589", "Mies", 1994, "mikael_123@hotmail.com", "045-3227674", 2.8);
-            Opiskelija jamk4 = new Opiskelija("Nääly", "Petteri", "X1234", "N/A", 1969, "näälymail@123123.fi", "043-1231234", 1.2);
-            Opiskelija jamk5 = new Opiskelija("Nörö", "Beetter", "Y4312", "N/A", 1973, "nörömail@123123.fi", "040-1234123", 1.1);
+            Opiskelija[] jamk = new Opiskelija[5];
+            jamk[0] = new Opiskelija("Jaakko", "Tammela", "K1697", "Mies", 1996, "tammi_574@hotmail.com", "045-3227518", 2.5);
+            jamk[1] = new Opiskelija("Lotta", "Tammela", "H8656", "Nainen", 1998, "siistisähköposti@gmail.com", "045-3227548", 4.8);
+            jamk[2] = new Opiskelija("Mikael", "Tammela", "K1589", "Mies", 1994, "mikael_123@hotmail.com", "045-3227674", 2.8);
+            jamk[3] = new Opiskelija("Nääly", "Petteri", "X1234", "N/A", 1969, "näälymail@123123.fi", "043-1231234", 1.2);
+            jamk[4] = new Opiskelija("Nörö", "Beetter", "Y4312", "N/A", 1973, "nörömail@123123.fi", "040-1234123", 1.1);
 
-            jamk1.PrintData();
-            jamk2.ToString();
-            jamk3.PrintContact();
-            jamk4.CheckLowGPA();
+            jamk[0].PrintData();
+            jamk[1].ToString();
+            jamk[2].PrintContact();
+            jamk[3].CheckLowGPA();
+
+            for (int i = 0; i < 5; i++)
+            {
+                jamk[i].PrintData();
+            }
         }
     }
 }
