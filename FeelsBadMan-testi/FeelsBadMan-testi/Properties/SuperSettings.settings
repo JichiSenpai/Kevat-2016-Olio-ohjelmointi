@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FeelsBadMan_testi.Properties" GeneratedClassName="SuperSettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="EURTOUSD" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1.11239</Value>
+    </Setting>
+    <Setting Name="USDTOEUR" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.898963</Value>
+    </Setting>
+    <Setting Name="default_eurtousd" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">1.11239</Value>
+    </Setting>
+    <Setting Name="default_usdtoeur" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.898963</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

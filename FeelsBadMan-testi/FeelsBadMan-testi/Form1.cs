@@ -23,8 +23,8 @@ namespace FeelsBadMan_testi
             double eurtousd;
             double usdtoeur;
 
-            eurtousd = 1.11239;
-            usdtoeur = 0.898963;
+            eurtousd = Properties.SuperSettings.Default.EURTOUSD;
+            usdtoeur = Properties.SuperSettings.Default.USDTOEUR;
 
             try
             {
@@ -32,14 +32,14 @@ namespace FeelsBadMan_testi
                 {
                     temppi = Convert.ToDouble(textBox1.Text);
                     temppi = temppi * eurtousd;
-                    textBox1.Text = Convert.ToString(temppi);
+                    textBox3.Text = Convert.ToString(temppi);
                 }
 
                 if (textBox2.Text != "" && textBox2.Enabled == true)
                 {
                     temppi = Convert.ToDouble(textBox2.Text);
                     temppi = temppi * usdtoeur;
-                    textBox2.Text = Convert.ToString(temppi);
+                    textBox4.Text = Convert.ToString(temppi);
                 }
             }
             catch (Exception ex)
@@ -53,6 +53,8 @@ namespace FeelsBadMan_testi
         {
             textBox1.Text = "";
             textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -64,6 +66,8 @@ namespace FeelsBadMan_testi
             if (checkBox1.Checked == false)
             {
                 textBox1.Enabled = false;
+                textBox1.Text = "";
+                textBox3.Text = "";
             }
         }
 
@@ -76,8 +80,15 @@ namespace FeelsBadMan_testi
             if (checkBox2.Checked == false)
             {
                 textBox2.Enabled = false;
+                textBox2.Text = "";
+                textBox4.Text = "";
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var form = new SettingsForm();
+            form.Show(this);
+        }
     }
 }
