@@ -40,7 +40,7 @@ namespace FeelsBadMan_testi
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Exception: " + ex + "\n\nNote, please use comma, not period when dealing with decimals");
+                MessageBox.Show("Note, please use comma, not period when dealing with decimals\n\n" + "Exception: " + ex);
             }
 
             }
