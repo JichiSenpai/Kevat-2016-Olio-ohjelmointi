@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Resources;
+using Windows.Media;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -12,6 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -58,13 +61,23 @@ namespace Harjoitustyo
 
             //<Border BorderBrush="Black" BorderThickness="0,1,0,0" Height="100">
             int teksti = 1;
+
+            Border border = new Border();
+            border.Name = "border" + teksti;
+            border.BorderThickness = new Thickness(0, 5, 0, 0);
+            
+          //  border.BorderBrush = SolidColorBrush();
+            
             TextBlock txt = new TextBlock();
             txt.Name = "textBox" + teksti;
             txt.Text = SCATR.Name;
             txt.FontSize = 30;
             txt.TextWrapping = TextWrapping.Wrap;
             teksti++;
-            stack1.Children.Add(txt);
+            
+            border.Child = txt;
+            //stack1.Children.Add(txt);
+            stack1.Children.Add(border);
         }
 
 
