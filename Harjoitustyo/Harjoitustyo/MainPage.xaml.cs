@@ -65,8 +65,7 @@ namespace Harjoitustyo
             Border border = new Border();
             border.Name = "border" + teksti;
             border.BorderThickness = new Thickness(0, 5, 0, 0);
-            
-          //  border.BorderBrush = SolidColorBrush();
+            //border.BorderBrush = new SolidColorBrush(Color.Black);
             
             TextBlock txt = new TextBlock();
             txt.Name = "textBox" + teksti;
@@ -74,10 +73,10 @@ namespace Harjoitustyo
             txt.FontSize = 30;
             txt.TextWrapping = TextWrapping.Wrap;
             teksti++;
-            
-            border.Child = txt;
-            //stack1.Children.Add(txt);
+
             stack1.Children.Add(border);
+            border.Child = txt;
+        //    stack1.Children.Add(txt);
         }
 
 
