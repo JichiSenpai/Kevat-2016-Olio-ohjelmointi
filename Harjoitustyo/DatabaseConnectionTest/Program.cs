@@ -28,12 +28,29 @@ class Program
                 conn = new MySqlConnection(myConnectionString);
                 conn.Open();
                 Console.WriteLine("Connection successful");
+
+                MySqlCommand command = conn.CreateCommand();
+                command.CommandText = "SHOW TABLES;";
+                MySqlDataReader Reader;
+                conn.Open();
+                Reader = command.ExecuteReader();
+                while (Reader.Read())
+                {
+                    string row = "";
+                    for (int i = 0; i < Reader.FieldCount; i++)
+                        row += Reader.GetValue(i).ToString() + ", ";
+                    Console.WriteLine(row);
+                }
+
+                conn.Close();
             }
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
             }
 
+           
+            
             /*SqlConnection testConnection = new SqlConnection();
             testConnection.ConnectionString =
                 "Server=mysql.labranet.jamk.fi;" +
