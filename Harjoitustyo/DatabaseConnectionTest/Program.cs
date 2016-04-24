@@ -19,7 +19,7 @@ class Program
             MySqlConnection conn;
 
             string myConnectionString = "Server=mysql.labranet.jamk.fi;" +
-                "Database=K1697;" +
+                "Database=K1697_2;" +
                 "Uid=K1697;" +
                 "Pwd=0MuzjwiZvKIpLmB0snwNRuFLPSqYjfxn;";
 
@@ -30,9 +30,10 @@ class Program
                 Console.WriteLine("Connection successful");
 
                 MySqlCommand command = conn.CreateCommand();
-                command.CommandText = "SHOW TABLES;";
+                //command.CommandText = "SHOW TABLES;";
+                //command.CommandText = "SELECT * FROM game;";
+                command.CommandText = "SHOW COLUMNS FROM game;";
                 MySqlDataReader Reader;
-                conn.Open();
                 Reader = command.ExecuteReader();
                 while (Reader.Read())
                 {
