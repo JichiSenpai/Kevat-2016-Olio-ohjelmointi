@@ -11,7 +11,7 @@
         
         <StackPanel x:Name="stack1" HorizontalAlignment="Left" Width="360" Background="#FFB4B4B4" Margin="10">
 
-            <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="TextBlock" FontSize="30"/>
+            
         </StackPanel>
 
         <StackPanel x:Name="gamedesc" Margin="380,10,10,10" Background="#FFB4B4B4">
