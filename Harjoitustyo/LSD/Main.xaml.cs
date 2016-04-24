@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Data;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -22,14 +23,15 @@ namespace LSD
         public int gameId { get; set; }
         public string gameName { get; set; }
         public int regionId { get; set; }
-        public string platformId { get; set; }
+        public int platformId { get; set; }
 
         public Game()
         {
 
         }
-        public Game(string gamename, int region, string platform)
+        public Game(int gameid, string gamename, int region, int platform)
         {
+            gameId = gameId;
             gameName = gamename;
             regionId = region;
             platformId = platform;
@@ -46,9 +48,27 @@ namespace LSD
         public Main()
         {
             this.InitializeComponent();
+            
 
-            Game SWE1R = new Game("Star Wars: Episode 1 Racer", 1999, "PC, N64, Dreamcast");
-            Game SCATR = new Game("Sly Cooper and the Thievius Raccoonus", 2002, "PS2, PS3");
+            Game SWE1R = new Game(
+                1,
+                "Star Wars: Episode 1 Racer",
+                1, 
+                3);
+
+            Game DMC3HD = new Game(
+               2,
+               "Sly Cooper and the Thievius Raccoonus",
+               2,
+               2);
+
+            Game SCATR = new Game(
+                3,
+                "Sly Cooper and the Thievius Raccoonus",
+                3,
+                1);
+
+           
 
             textBlock.Text = SWE1R.gameName;
 
@@ -58,7 +78,9 @@ namespace LSD
             Border border = new Border();
             border.Name = "border" + teksti;
             border.BorderThickness = new Thickness(0, 5, 0, 0);
-            //border.BorderBrush = new SolidColorBrush(Color.Black);
+
+            //border.BorderBrush = new SolidColorBrush((Color)color.GetValue(null));
+            //new SolidColorBrush(Color.Black)
 
             TextBlock txt = new TextBlock();
             txt.Name = "textBox" + teksti;

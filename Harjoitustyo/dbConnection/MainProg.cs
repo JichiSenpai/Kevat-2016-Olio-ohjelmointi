@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,9 +8,9 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
 
-namespace DatabaseConnectionTest
+namespace dbConnection
 {
-class Program
+    public class MainProg
     {
         static void Main(string[] args)
         {
@@ -32,8 +31,8 @@ class Program
                 MySqlCommand command = conn.CreateCommand();
                 //command.CommandText = "SHOW TABLES;";
                 command.CommandText = "SELECT * FROM game;";
-               //command.CommandText = "SHOW COLUMNS FROM game;";
-               // command.CommandText = "SELECT gameId as id, gameName as name, region_regionId as regionId, platform_platformId as platformId FROM dbo.game FOR XML PATH('game')";
+                //command.CommandText = "SHOW COLUMNS FROM game;";
+                // command.CommandText = "SELECT gameId as id, gameName as name, region_regionId as regionId, platform_platformId as platformId FROM dbo.game FOR XML PATH('game')";
                 // , ROOT('Games')
                 MySqlDataReader Reader;
                 Reader = command.ExecuteReader();
@@ -52,8 +51,8 @@ class Program
                 Console.WriteLine(ex.Message);
             }
 
-           
-            
+
+
             /*SqlConnection testConnection = new SqlConnection();
             testConnection.ConnectionString =
                 "Server=mysql.labranet.jamk.fi;" +
@@ -76,4 +75,5 @@ class Program
 
         }
     }
+}
 }
