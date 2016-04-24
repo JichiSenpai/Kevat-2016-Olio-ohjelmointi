@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harjoitustyo", "Harjoitusty
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseConnectionTest", "DatabaseConnectionTest\DatabaseConnectionTest.csproj", "{052EEF88-8A8A-41D5-8848-D0AA308DD34E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "v2", "v2\v2.csproj", "{54E2360D-A657-4094-A67B-D7871B012B5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,26 @@ Global
 		{052EEF88-8A8A-41D5-8848-D0AA308DD34E}.Release|x64.Build.0 = Release|Any CPU
 		{052EEF88-8A8A-41D5-8848-D0AA308DD34E}.Release|x86.ActiveCfg = Release|Any CPU
 		{052EEF88-8A8A-41D5-8848-D0AA308DD34E}.Release|x86.Build.0 = Release|Any CPU
+		{54E2360D-A657-4094-A67B-D7871B012B5D}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{54E2360D-A657-4094-A67B-D7871B012B5D}.Debug|ARM.ActiveCfg = Debug|ARM
+		{54E2360D-A657-4094-A67B-D7871B012B5D}.Debug|ARM.Build.0 = Debug|ARM
+		{54E2360D-A657-4094-A67B-D7871B012B5D}.Debug|ARM.Deploy.0 = Debug|ARM
+		{54E2360D-A657-4094-A67B-D7871B012B5D}.Debug|x64.ActiveCfg = Debug|x64
+		{54E2360D-A657-4094-A67B-D7871B012B5D}.Debug|x64.Build.0 = Debug|x64
+		{54E2360D-A657-4094-A67B-D7871B012B5D}.Debug|x64.Deploy.0 = Debug|x64
+		{54E2360D-A657-4094-A67B-D7871B012B5D}.Debug|x86.ActiveCfg = Debug|x86
+		{54E2360D-A657-4094-A67B-D7871B012B5D}.Debug|x86.Build.0 = Debug|x86
+		{54E2360D-A657-4094-A67B-D7871B012B5D}.Debug|x86.Deploy.0 = Debug|x86
+		{54E2360D-A657-4094-A67B-D7871B012B5D}.Release|Any CPU.ActiveCfg = Release|x86
+		{54E2360D-A657-4094-A67B-D7871B012B5D}.Release|ARM.ActiveCfg = Release|ARM
+		{54E2360D-A657-4094-A67B-D7871B012B5D}.Release|ARM.Build.0 = Release|ARM
+		{54E2360D-A657-4094-A67B-D7871B012B5D}.Release|ARM.Deploy.0 = Release|ARM
+		{54E2360D-A657-4094-A67B-D7871B012B5D}.Release|x64.ActiveCfg = Release|x64
+		{54E2360D-A657-4094-A67B-D7871B012B5D}.Release|x64.Build.0 = Release|x64
+		{54E2360D-A657-4094-A67B-D7871B012B5D}.Release|x64.Deploy.0 = Release|x64
+		{54E2360D-A657-4094-A67B-D7871B012B5D}.Release|x86.ActiveCfg = Release|x86
+		{54E2360D-A657-4094-A67B-D7871B012B5D}.Release|x86.Build.0 = Release|x86
+		{54E2360D-A657-4094-A67B-D7871B012B5D}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
