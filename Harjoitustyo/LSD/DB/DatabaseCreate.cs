@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LSD
+namespace LSD.DB
 {
     public class Game
     {
@@ -34,13 +34,13 @@ namespace LSD
         {
             gameId = gameid;
             gameName = gamename;
-            gameRegion = region;
             gamePlatform = platform;
+            gameRegion = region;
         }
 
         public override string ToString()
         {
-            return gameName + "\nRegion: " + gameRegion + "\nPlatform: " + gamePlatform;
+            return gameName + "\nPlatform: " + gamePlatform + "\nRegion: " + gameRegion;
         }
 
     }

@@ -7,25 +7,36 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:data="using:LSD.DB"
     mc:Ignorable="d" MaxHeight="720" MaxWidth="1280" MinWidth="1280" MinHeight="720">
-
+    <Page.Resources>
+        <DataTemplate x:Key="GameTemplate" x:DataType="data:Game">
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                <StackPanel>
+                    <Border BorderBrush="Black" BorderThickness="0,0,0,1">
+                    <TextBlock Text="{x:Bind gameName}" HorizontalAlignment="Left" FontSize="38" TextWrapping="Wrap" Width="343"/>
+                    </Border>
+                </StackPanel>
+            </StackPanel>
+            
+        </DataTemplate>
+    </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
 
 
         <ListView ItemsSource="{x:Bind gameview.Games}"
               ItemClick="ListView_ItemClick"
               IsItemClickEnabled="True"
-                  Margin="10,10,910,10" Background="#FFB4B4B4">
+                  Margin="10,10,910,10" Background="#FFB4B4B4"
+                  ItemTemplate="{StaticResource GameTemplate}"/>
 
-        </ListView>
+        <Grid x:Name="gamedesc" Margin="390,10,0,560" Background="#FFB4B4B4" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="title" Text="&lt;-- Select a game" Foreground="Black" Grid.Column="0" FontSize="40" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20,0,0,0" />
+            <TextBlock x:Name="info" Foreground="Black" Grid.Column="1" FontSize="26.667" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,20,0" />
 
-        <GridView x:Name="gamedesc" Margin="380,10,10,560" Background="#FFB4B4B4">
-            <TextBlock x:Name="title" Height="150" Foreground="Black" VerticalAlignment="Bottom" />
-            <TextBlock x:Name="info" Height="150" Foreground="Black" VerticalAlignment="Bottom" >
-                <TextBlock.RenderTransform>
-                    <CompositeTransform ScaleX="-1"/>
-                </TextBlock.RenderTransform>
-            </TextBlock>
-        </GridView>
+        </Grid>
 
 
     </Grid>
