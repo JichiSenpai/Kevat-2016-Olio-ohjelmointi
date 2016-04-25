@@ -5,18 +5,27 @@
     xmlns:local="using:LSD"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:LSD.DB"
     mc:Ignorable="d" MaxHeight="720" MaxWidth="1280" MinWidth="1280" MinHeight="720">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
-        
-        <StackPanel x:Name="stack1" HorizontalAlignment="Left" Width="360" Background="#FFB4B4B4" Margin="10">
 
-            
-        </StackPanel>
 
-        <StackPanel x:Name="gamedesc" Margin="380,10,10,10" Background="#FFB4B4B4">
-            <TextBlock x:Name="title" Margin="0,0,520,0" />
-        </StackPanel>
+        <ListView ItemsSource="{x:Bind gameview.Games}"
+              ItemClick="ListView_ItemClick"
+              IsItemClickEnabled="True"
+                  Margin="10,10,910,10" Background="#FFB4B4B4">
+
+        </ListView>
+
+        <GridView x:Name="gamedesc" Margin="380,10,10,560" Background="#FFB4B4B4">
+            <TextBlock x:Name="title" Height="150" Foreground="Black" VerticalAlignment="Bottom" />
+            <TextBlock x:Name="info" Height="150" Foreground="Black" VerticalAlignment="Bottom" >
+                <TextBlock.RenderTransform>
+                    <CompositeTransform ScaleX="-1"/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+        </GridView>
 
 
     </Grid>

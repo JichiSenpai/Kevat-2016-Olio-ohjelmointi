@@ -18,50 +18,19 @@ using Windows.UI.Xaml.Navigation;
 
 namespace LSD
 {
-    public class Game
-    {
-        public int gameId { get; set; }
-        public string gameName { get; set; }
-        public int regionId { get; set; }
-        public int platformId { get; set; }
 
-        public static int gamecount;
-
-        public Game()
-        {
-            gamecount++;
-        }
-
-        ~Game()
-        {
-            gamecount--;
-        }
-
-        public static int GetGameCount()
-        {
-            return gamecount;
-        }
-
-        public Game(int gameid, string gamename, int region, int platform)
-        {
-            gameId = gameId;
-            gameName = gamename;
-            regionId = region;
-            platformId = platform;
-        }
-
-        public override string ToString()
-        {
-            return gameName + "\nRegion: " + regionId + "\nPlatform: " + platformId;
-        }
-
-    }
     public sealed partial class Main : Page
     {
+        public GameView gameview { get; set; }
+
         public Main()
         {
             this.InitializeComponent();
-            
+
+            this.gameview = new GameView();
+            /* 
+           
+            ----- vanhaa paskakoodia -----
 
             Game game1 = new Game(
                 1,
@@ -86,8 +55,7 @@ namespace LSD
             games.Add(1, game1);
             games.Add(2, game2);
             games.Add(3, game3);
-
-
+           
 
             //<Border BorderBrush="Black" BorderThickness="0,1,0,0" Height="100">
             
@@ -103,9 +71,9 @@ namespace LSD
             
             while (looppi != 0)
             {
-                Border border = new Border();
-                border.Name = "border" + teksti;
-                border.BorderThickness = new Thickness(0, 5, 0, 0);
+               // Border border = new Border();
+               // border.Name = "border" + teksti;
+               // border.BorderThickness = new Thickness(0, 5, 0, 0);
 
                 TextBlock txt = new TextBlock();
                 txt.Name = "textBox" + teksti;                
@@ -113,14 +81,27 @@ namespace LSD
                 txt.FontSize = 30;
                 txt.TextWrapping = TextWrapping.Wrap;
                 teksti++;
-                stack1.Children.Add(border);
-                border.Child = txt;
+                //  stack1.Children.Add(border);
+                // border.Child = txt;
+                stack1.Children.Add(txt);
                 looppi--;
             }
+            */
 
+            /* vanhaa layouttia
+            <StackPanel x:Name="stack1" HorizontalAlignment="Left" Width="360" Background="#FFB4B4B4" Margin="10">
 
+        </StackPanel>
+            */
 
-            //    stack1.Children.Add(txt);
+        }
+
+        private void ListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Game game = (Game)e.ClickedItem;
+
+            title.Text = game.gameName;
+            info.Text = "Platform: " + game.gamePlatform + "/nRegion: " + game.gameRegion;
         }
     }
 }
