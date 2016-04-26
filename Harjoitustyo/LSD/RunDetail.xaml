@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="LSD.RunDetail"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LSD"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="White">
+        <Button Height="75" Margin="10" VerticalAlignment="Top" Width="150" Click="BackToMain" Background="#FF979797">
+            <TextBlock Text="Back" FontSize="48" />
+        </Button>
+        <StackPanel Margin="0,100,0,0">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Name="time" Text="Run Time: " FontSize="48" />
+            <TextBlock Name="platform" Text="Platform: " FontSize="48" Margin="10,0,0,0" />
+            <TextBlock Name="region" Text="Region: " FontSize="48" Margin="10,0,0,0" />
+            </StackPanel>
+
+            <TextBlock Name="runner" Text="Runner: " FontSize="48" />
+            <TextBlock Name="comment" Text="Runner Comment: " FontSize="48" TextWrapping="Wrap" />
+        </StackPanel>
+            
+    </Grid>
+</Page>
