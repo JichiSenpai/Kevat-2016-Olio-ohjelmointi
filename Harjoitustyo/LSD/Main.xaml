@@ -18,6 +18,15 @@
             </StackPanel>
             
         </DataTemplate>
+        <DataTemplate x:Key="RunTemplate" x:DataType="data:Run">
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{x:Bind runTime}" HorizontalAlignment="Left" FontSize="38" TextWrapping="Wrap" Width="343"/>
+                    <TextBlock Text="{x:Bind runRunner}" HorizontalAlignment="Left" FontSize="38" TextWrapping="Wrap" Width="343"/>
+                </StackPanel>
+            </StackPanel>
+
+        </DataTemplate>
     </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
 
@@ -28,7 +37,7 @@
                   Margin="10,10,910,10" Background="#FFB4B4B4"
                   ItemTemplate="{StaticResource GameTemplate}"/>
 
-        <Grid x:Name="gamedesc" Margin="390,10,0,560" Background="#FFB4B4B4" >
+        <Grid x:Name="gamedesc" Margin="390,10,10,560" Background="#FFB4B4B4" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -37,6 +46,12 @@
             <TextBlock x:Name="info" Foreground="Black" Grid.Column="1" FontSize="26.667" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,20,0" />
 
         </Grid>
+
+        <ListView Name="RunList" ItemsSource="{Binding}"
+              ItemClick="RunClick"
+              IsItemClickEnabled="True"
+                  Margin="390,175,10,10" Background="#FFB4B4B4"
+                  ItemTemplate="{StaticResource RunTemplate}"/>
 
 
     </Grid>

@@ -23,11 +23,14 @@ namespace LSD
     {
         public GameView gameview { get; set; }
 
+        public RunView runview { get; set; }
+
         public Main()
         {
             this.InitializeComponent();
 
             this.gameview = new GameView();
+            this.runview = new RunView();
             /* 
            
             ----- vanhaa paskakoodia -----
@@ -102,6 +105,16 @@ namespace LSD
 
             title.Text = game.gameName;
             info.Text = "Platform: " + game.gamePlatform + "\nRegion: " + game.gameRegion;
+            RunList.ItemsSource = null;
+            RunList.ItemsSource = runview.Runs;
+        }
+
+        private void RunClick(object sender, ItemClickEventArgs e)
+        {
+           // Game game = (Game)e.ClickedItem;
+
+          //  title.Text = game.gameName;
+           // info.Text = "Platform: " + game.gamePlatform + "\nRegion: " + game.gameRegion;
         }
     }
 }

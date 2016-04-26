@@ -65,27 +65,36 @@ namespace LSD.DB
     public class Run {
 
         public int runId { get; set; }
-        public GameView runGame { get; set; }
         public string runTime { get; set; }
+        public string runRunner { get; set; }
         public string gameRegion { get; set; }
         public string gamePlatform { get; set; }
 
-        public Run(int runid, GameView rungame, string runtime)
+        public Run ()
+        {
+
+        }
+
+        public Run(int runid, string runrunner, string runtime)
         {
             runId = runid;
-            runGame = rungame;
             runTime = runtime;
+            runRunner = runrunner;
         }
     }
 
     public class RunView
     {
         private List<Run> runs = new List<Run>();
-        private List<Run> Runs { get { return runs; } }
+        public List<Run> Runs { get { return runs; } }
 
         public RunView()
         {
-            //runs.Add(new Run { runId = 1, runGame = , runTime = "52:43.50" });
+            runs.Add(new Run { runId = 1, runTime = "52:43.50", runRunner = "Siistijäbä123" });
+            runs.Add(new Run { runId = 2, runTime = "1:12:20.50", runRunner = "Jäbä2" });
+            runs.Add(new Run { runId = 3, runTime = "32:43.50", runRunner = "Tosisiistijäbä" });
+            runs.Add(new Run { runId = 4, runTime = "22:43.50", runRunner = "Epäsiistijäbä" });
+            runs.Add(new Run { runId = 5, runTime = "59:55.50", runRunner = "Siistijäbä123" });
         }
 
     }
