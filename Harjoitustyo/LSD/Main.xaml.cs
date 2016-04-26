@@ -106,7 +106,20 @@ namespace LSD
             title.Text = game.gameName;
             info.Text = "Platform: " + game.gamePlatform + "\nRegion: " + game.gameRegion;
             RunList.ItemsSource = null;
-            RunList.ItemsSource = runview.Runs;
+            //RunList.ItemsSource = runview.Runs;
+
+            
+            var query = from runs in runview.Runs
+                        join games in gameview.Games
+                        on runs.gameId equals game.gameId
+                        select runs;
+
+            //List<Run> viewruns = query.Except(query.GroupBy(i => i.runId).Select(ss => ss.FirstOrDefault())).ToList();
+
+            // RunList.ItemsSource = query.Except(query.GroupBy(x => x.runId).Select(y => y.FirstOrDefault()));
+
+            RunList.ItemsSource = query.Distinct();
+
         }
 
         private void RunClick(object sender, ItemClickEventArgs e)
