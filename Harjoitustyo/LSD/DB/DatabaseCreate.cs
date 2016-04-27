@@ -14,7 +14,7 @@ namespace LSD.DB
         public string gameRegion { get; set; }
 
         public static int gamecount;
-
+        public string gameImage { get; set; }
         public Game()
         {
             gamecount++;
@@ -53,11 +53,11 @@ namespace LSD.DB
 
         public GameView()
         {
-            games.Add(new Game { gameId = 1, gameName = "Star Wars: Episode 1 Racer", gamePlatform = "PC, N64, Dreamcast", gameRegion = "PAL, NTSC, NTSC-J" });
-            games.Add(new Game { gameId = 2, gameName = "Sly Cooper and the Thievius Raccoonus", gamePlatform = "PS2", gameRegion = "PAL, NTSC, NTSC-J" });
-            games.Add(new Game { gameId = 3, gameName = "Devil May Cry 3 HD", gamePlatform = "PS3", gameRegion = "PAL, NTSC, NTSC-J" });
-            games.Add(new Game { gameId = 4, gameName = "Kingdom Hearts 2 Final Mix", gamePlatform = "PS2", gameRegion = "NTSC-J" });
-            games.Add(new Game { gameId = 5, gameName = "Hitman Blood Money", gamePlatform = "PC", gameRegion = "N/A" });
+            games.Add(new Game { gameId = 1, gameName = "Star Wars: Episode 1 Racer", gamePlatform = "PC, N64, Dreamcast", gameRegion = "PAL, NTSC, NTSC-J", gameImage = "/Assets/cover_swe1r.jpg" });
+            games.Add(new Game { gameId = 2, gameName = "Sly Cooper and the Thievius Raccoonus", gamePlatform = "PS2", gameRegion = "PAL, NTSC, NTSC-J", gameImage = "/Assets/cover_sly1.jpg" });
+            games.Add(new Game { gameId = 3, gameName = "Devil May Cry 3 HD", gamePlatform = "PS3", gameRegion = "PAL, NTSC, NTSC-J", gameImage = "/Assets/cover_dmc3.jpg" });
+            games.Add(new Game { gameId = 4, gameName = "Kingdom Hearts 2 Final Mix", gamePlatform = "PS2", gameRegion = "NTSC-J", gameImage = "/Assets/cover_kh2fm.jpg" });
+            games.Add(new Game { gameId = 5, gameName = "Hitman Blood Money", gamePlatform = "PC", gameRegion = "N/A", gameImage = "/Assets/cover_hitmanbm.jpg" });
         }
 
     }

@@ -115,6 +115,11 @@
     <None Include="LSD_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\cover_dmc3.jpg" />
+    <Content Include="Assets\cover_hitmanbm.jpg" />
+    <Content Include="Assets\cover_kh2fm.jpg" />
+    <Content Include="Assets\cover_sly1.jpg" />
+    <Content Include="Assets\cover_swe1r.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

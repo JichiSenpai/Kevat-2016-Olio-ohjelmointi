@@ -8,10 +8,12 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Maps;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using LSD.DB;
 
@@ -106,9 +108,10 @@ namespace LSD
 
             title.Text = game.gameName;
             info.Text = "Platform: " + game.gamePlatform + "\nRegion: " + game.gameRegion;
+            image.Source = new BitmapImage(new Uri("ms-appx:" + game.gameImage, UriKind.Absolute));
             RunList.ItemsSource = null;
             //RunList.ItemsSource = runview.Runs;
-
+            
             
             var query = from runs in runview.Runs
                         join games in gameview.Games

@@ -13,13 +13,19 @@
         </Button>
         <StackPanel Margin="0,100,0,0">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Name="time" Text="Run Time: " FontSize="48" />
-            <TextBlock Name="platform" Text="Platform: " FontSize="48" Margin="10,0,0,0" />
-            <TextBlock Name="region" Text="Region: " FontSize="48" Margin="10,0,0,0" />
+                <TextBlock Name="time" Text="Run Time: " FontSize="48" Margin="0,0,10,0" />
+                <Border BorderThickness="1,0,0,0" BorderBrush="Black">
+                <TextBlock Name="platform" Text="Platform: " FontSize="48" Margin="10,0" />
+                </Border>
+                <Border BorderThickness="1,0,0,0" BorderBrush="Black">
+                    <TextBlock Name="region" Text="Region: " FontSize="48" Margin="10,0,0,0" />
+                </Border>
             </StackPanel>
 
             <TextBlock Name="runner" Text="Runner: " FontSize="48" />
-            <TextBlock Name="comment" Text="Runner Comment: " FontSize="48" TextWrapping="Wrap" />
+            
+                <TextBlock Name="comment" Text="Runner Comment: " FontSize="48" TextWrapping="Wrap" />
+            
         </StackPanel>
             
     </Grid>

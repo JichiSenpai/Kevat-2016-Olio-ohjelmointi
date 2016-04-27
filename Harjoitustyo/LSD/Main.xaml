@@ -41,9 +41,11 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock x:Name="title" Text="&lt;-- Select a game" Foreground="Black" Grid.Column="0" FontSize="40" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20,0,0,0" />
-            <TextBlock x:Name="info" Foreground="Black" Grid.Column="1" FontSize="26.667" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,20,0" />
+            <Image Name="image" HorizontalAlignment="Center" Grid.Column="0"/>
+            <TextBlock x:Name="title" Text="&lt;--&#10; Select a game" Foreground="Black" Grid.Column="1" FontSize="40" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20,0,0,0" />
+            <TextBlock x:Name="info" Foreground="Black" Grid.Column="2" FontSize="26.667" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,20,0" />
 
         </Grid>
 
