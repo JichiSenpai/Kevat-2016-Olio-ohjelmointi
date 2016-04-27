@@ -31,6 +31,7 @@ namespace LSD
             
         }
 
+        //sivulle tullessa kaiken datan valmistelu
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
@@ -44,16 +45,11 @@ namespace LSD
                 comment.Text = "Runner Comment:\n" + run.runComment;
         }
 
+        //takaisin pääsivulle
         private void BackToMain(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Main), null);
 
-
-
-            // Game game = (Game)e.ClickedItem;
-
-            //  title.Text = game.gameName;
-            // info.Text = "Platform: " + game.gamePlatform + "\nRegion: " + game.gameRegion;
         }
     }
 }

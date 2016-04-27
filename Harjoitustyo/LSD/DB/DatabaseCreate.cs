@@ -46,6 +46,7 @@ namespace LSD.DB
     }
 
 
+    //kaikki pelit listaan
     public class GameView
     {
         private List<Game> games = new List<Game>();
@@ -62,6 +63,7 @@ namespace LSD.DB
 
     }
 
+    //runin määrittely
     public class Run {
 
         public int runId { get; set; }
@@ -90,6 +92,7 @@ namespace LSD.DB
         }
     }
 
+    //kaikki runit yhteiseen listaan
     public class RunView
     {
         private List<Run> runs = new List<Run>();

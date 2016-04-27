@@ -34,6 +34,7 @@ namespace LSD
 
             this.gameview = new GameView();
             this.runview = new RunView();
+            
             /* 
            
             ----- vanhaa paskakoodia -----
@@ -102,6 +103,7 @@ namespace LSD
 
         }
 
+        //pelin valitseminen
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
             Game game = (Game)e.ClickedItem;
@@ -125,22 +127,15 @@ namespace LSD
             query = query.Distinct();
 
             RunList.ItemsSource = query.OrderBy(o => o.runTime);
-            //
         }
-
+        
+        //yksittäiseen runiin meneminen
         private void RunClick(object sender, ItemClickEventArgs e)
         {
             Run run = (Run)e.ClickedItem;
 
             Frame.Navigate(typeof(RunDetail), run);
-
-
-            ;
-
-           
-
-            //  title.Text = game.gameName;
-            // info.Text = "Platform: " + game.gamePlatform + "\nRegion: " + game.gameRegion;
+            
         }
 
         
